@@ -3,33 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap" rel="stylesheet">    <title>Rockstar Games</title>
 </head>
 <body>
-    <header>
-        <div class="header__left-side">
-            <a href="#">
-                <img src="./assets/icons/rockstar-logo.svg" alt="Rockstar Games logo">
-            </a>
+    <header class="header">
+        <!-- Logos container -->
+        <div class="header__logos-container">
+            <!-- Rockstar logo -->
+            <div class="header__logo  header__logo--rockstar">
+                <a href=""><img src="./assets/icons/rockstar-logo.svg" alt="Rockstar logo"></a>
+            </div>
+
             <div class="vertical-div"></div>
-            <img src="./assets/icons/logo.svg" alt="Red Dead Redemption 2 logo">
+            
+            <!-- RDR2 logo -->
+            <div class="header__logo header__logo--rdr2">
+                <img src="./assets/icons/logo.svg" alt="Logo Red Dead Redepmtion 2">
+            </div>
         </div>
-        <nav class="header__nav">
-            <a href="#" class="nav__item">OVERVIEW</a>
-            <a href="#" class="nav__item">EXPLORE<img src="./assets/icons/down-arrow.svg" alt="Down arrow icon"></a>
-            <a href="#" class="nav__item">PROGRESS <img src="./assets/icons/down-arrow.svg" alt="Down arrow icon"></a>
-            <a href="#" class="nav__item">MORE<img src="./assets/icons/down-arrow.svg" alt="Down arrow icon"></a>
-        <div class="header__right-side">
-            <a href="#">Buy Now</a>
-            <a href="#">
-                <img src="./assets/icons/search.svg" alt="Search icon">
-            </a>
-            <a href="#">
-                <img src="./assets/icons/user.svg" alt="User profile icon">
-            </a>
+
+        <!-- Hamburger menu button -->
+        <button class="header__hamburger-btn"><img src="./assets/icons/menu.svg" alt=""></button>
+
+        <!-- Links for desktop -->
+        <nav class="header__nav-desktop">
+            <ul class="nav-desktop__list">
+                <li class="desktop__list--overview"><a href="">OVERVIEW</a></li>
+                <li class="desktop__list--explore"><button>EXPLORE</button></li>
+                <li class="desktop__list--progress"><button>PROGRESS</button></li>
+                <li class="desktop__list--more"><button>MORE</button></li>
+            </ul>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="header__button-container">
+            <button class="header__button header__button--buy">Buy Now</button> 
+            <button class="header__button header__button--search"><img src="./assets/icons/search.svg" alt=""></button>
+            <button class="header__button header__button--profile"><img src="./assets/icons/user.svg" alt=""></button>
         </div>
+
+        <!-- Hamburger menu content -->
+        <nav class="header__hamburger-menu">
+            <ul class="hamburger-menu__list">
+                <li>
+                    <label for=""></label>
+                    <input type="text" placeholder="Search Rockstar Games...">
+                </li>
+                <li><a href=""></a></li>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><button></button></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><button></button></li>
+            </ul>
+        </nav>
     </header>
     <main></main>
     <footer></footer>
