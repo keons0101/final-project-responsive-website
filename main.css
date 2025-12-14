@@ -1,6 +1,10 @@
 :root {
+    /* Colors */
     --white: #FFF;
     --black: #000;
+
+    /* fonts  */
+    --roboto: "Monteserrat", sans-serif;
 }
 
 * {
@@ -9,10 +13,21 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    font-family: var(--roboto);
 }
 
-body {
-    /* background-color: var(--black); */
+a {
+    color: var(--white);
+    font-family: var(--roboto);
+    font-size: 13.5px;
+}
+
+a:visited {
+    color: var(--white);
+}
+
+button {
+    font-size: 13.5px;
 }
 
 .header {
@@ -26,11 +41,15 @@ body {
     padding-bottom: 24px;
 }
 
-
+/* To get logos vertically centered */
+.header__logos-container>.header__logo>a, .header__logos-container>.header__logo {
+    display: flex;
+    align-items: center;
+}
 
 /* --------------------------------------------------- */
 /* Hiding elements for mobile view */
-.header__logo--rockstar, .header__nav-desktop, .header__button--buy, .header__button--search, .header__hamburger-menu, .vertical-div {
+.header__logo--rockstar>a>img, .header__nav-desktop, .header__button--buy, .header__button--search, .header__hamburger-menu, .vertical-div, .desktop__list--catalogue, .desktop__list--support, .desktop__list--media {
     display: none;
 }
 /* --------------------------------------------------- */
@@ -38,12 +57,29 @@ body {
 
 
 /* --------------------------------------------------- */
-/* Hiding elements for mobile view */
+/* Setting some styles for buttons */
 .header__hamburger-btn, .header__button, button{
     background-color: transparent;
     border: none;
     cursor: pointer;
     color: var(--white);
+}
+
+.header__button--buy {
+    border: 1px solid var(--white);
+    border-radius: 24px;
+    padding-inline: 16px;
+    padding-block: 10px;
+}
+
+.desktop__list-element button, .desktop__list-element a {
+    display: flex;
+    align-items: center;
+}
+
+.desktop__list--catalogue img, .desktop__list--support img {
+    width: 20px;
+    height: auto;
 }
 /* --------------------------------------------------- */
 
@@ -67,10 +103,16 @@ body {
 
 
 /* --------------------------------------------------- */
-/* Setting a width for the logo in mobile view */
+/* Setting a width for the logos in mobile view */
 .header__logo--rdr2 img {
     height: auto;
     width: 195px;
+    align-self: center;
+}
+
+.header__logo--rockstar>a>img {
+    width: 32px;
+    height: auto;
 }
 /* --------------------------------------------------- */
 
@@ -92,14 +134,75 @@ body {
 
 /* --------------------------------------------------- */
 @media (min-width: 1024px) {
-    /* --------------------------------------------------- */
-    /* HEADER */
-    .header__logo--rockstar, .vertical-div, .header__nav-desktop, .header__button--search, .header__button--buy {
-        display: block;
+
+    /* xxxxxxxxxxxxxxxxxxx HEADER xxxxxxxxxxxxxxxxxxxxxx */
+
+    .header {
+        padding-inline: 64px;
+        padding-block: 28px;
+    }
+
+    .header__logo--rockstar>a>img, .vertical-div, .header__nav-desktop, .header__button--search, .header__button--buy {
+        display: flex;
     }
     
     .header__hamburger-btn, .desktop__list--explore, .desktop__list--progress {
         display: none;
     }
 
+    /* Set the new order for the elements  */
+    .header__logos-container {
+        order: 1;
+    }
+    .header__nav-desktop {
+        order: 2;
+    }
+    /* --------------------------------------- */
+    
+    /* Set containers as flexbox */
+    .header__logos-container {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .header__nav-desktop ul {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .header__button-container {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+    /* --------------------------------------- */
+    
+    /* Vertical div between logos */
+    .vertical-div {
+        background-color: #828282;
+        width: 2px;
+        height: 24px;
+    }
+
+    /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+}
+
+@media (min-width: 1075px) {
+    .desktop__list--explore {
+        display: flex;
+    }
+}
+
+@media (min-width: 1184px) {
+    .desktop__list--progress {
+        display: flex;
+    }
+}
+
+@media (min-width: 1512px) {
+    .desktop__list--catalogue, .desktop__list--support {
+        display: flex;
+    }
 }
