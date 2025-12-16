@@ -14,7 +14,7 @@
         <!-- Logos container -->
         <div class="header__logos-container">
             <!-- Rockstar logo -->
-            <div class="header__logo  header__logo--rockstar">
+            <div class="header__logo header__logo--rockstar">
                 <a href=""><img src="./assets/icons/rockstar-logo.svg" alt="Rockstar logo"></a>
             </div>
 
@@ -27,40 +27,85 @@
         </div>
 
         <!-- Hamburger menu button -->
-        <button class="header__hamburger-btn"><img src="./assets/icons/menu.svg" alt=""></button>
+        <button class="header__hamburger-btn" id="hamburgerBtn">
+            <img src="./assets/icons/menu.svg" alt="Menu">
+        </button>
 
         <!-- Links for desktop -->
         <nav class="header__nav-desktop">
             <ul class="nav-desktop__list">
-                <li class="desktop__list-element desktop__list--overview"><a href="">OVERVIEW</a></li>
+                <li class="desktop__list-element desktop__list--overview">
+                    <a href="">OVERVIEW</a>
+                </li>
+                
+                <!-- Explore submenu -->
                 <li class="desktop__list-element desktop__list--explore">
-                    <button>EXPLORE
+                    <button class="dropdown-btn">
+                        EXPLORE
                         <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
                     </button>
+                    <div class="dropdown-menu">
+                        <a href="#">Story</a>
+                        <a href="#">Characters</a>
+                        <a href="#">World</a>
+                        <a href="#">Gameplay</a>
+                    </div>
                 </li>
-                <li class="desktop__list-element desktop__list--progress" >
-                    <button>PROGRESS
+                
+                <!-- Progress submenu -->
+                <li class="desktop__list-element desktop__list--progress">
+                    <button class="dropdown-btn">
+                        PROGRESS
                         <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
                     </button>
+                    <div class="dropdown-menu">
+                        <a href="#">Achievements</a>
+                        <a href="#">Challenges</a>
+                        <a href="#">Stats</a>
+                    </div>
                 </li>
-                <li class="desktop__list-element desktop__list--more">
-                    <button>MORE
-                        <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
-                    </button>
-                </li>
+                
+                <!-- Media submenu -->
                 <li class="desktop__list-element desktop__list--media">
-                    <button>MEDIA
+                    <button class="dropdown-btn">
+                        MEDIA
                         <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
                     </button>
+                    <div class="dropdown-menu">
+                        <a href="#">Screenshots</a>
+                        <a href="#">Videos</a>
+                        <a href="#">Wallpapers</a>
+                    </div>
                 </li>
+                
+                <li class="desktop__list-element desktop__list--online">
+                    <a href="#">ONLINE</a>
+                </li>
+                
+                <!-- More submenu -->
+                <li class="desktop__list-element desktop__list--more">
+                    <button class="dropdown-btn">
+                        MORE
+                        <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#">News</a>
+                        <a href="#">Guides</a>
+                        <a href="#">Community</a>
+                        <a href="#">Forums</a>
+                    </div>
+                </li>
+                
                 <li class="desktop__list-element desktop__list--catalogue">
-                    <a href="#">CATALOGUE
-                        <img src="./assets/icons/top-right-arrow.svg" alt="Top right arrow arrow">
+                    <a href="#">
+                        CATALOGUE
+                        <img src="./assets/icons/top-right-arrow.svg" alt="Top right arrow">
                     </a>
                 </li>
                 <li class="desktop__list-element desktop__list--support">
-                    <a href="#">SUPPORT
-                        <img src="./assets/icons/top-right-arrow.svg" alt="Top right arrow arrow">
+                    <a href="#">
+                        SUPPORT
+                        <img src="./assets/icons/top-right-arrow.svg" alt="Top right arrow">
                     </a>
                 </li>
             </ul>
@@ -69,29 +114,99 @@
         <!-- Buttons -->
         <div class="header__button-container">
             <button class="header__button header__button--buy">Buy Now</button> 
-            <button class="header__button header__button--search"><img src="./assets/icons/search.svg" alt=""></button>
-            <button class="header__button header__button--profile"><img src="./assets/icons/user.svg" alt=""></button>
+            <button class="header__button header__button--search">
+                <img src="./assets/icons/search.svg" alt="Search">
+            </button>
+            <button class="header__button header__button--profile">
+                <img src="./assets/icons/user.svg" alt="Profile">
+            </button>
         </div>
 
         <!-- Hamburger menu content -->
-        <nav class="header__hamburger-menu">
-            <ul class="hamburger-menu__list">
-                <li>
-                    <label for=""></label>
-                    <input type="text" placeholder="Search Rockstar Games...">
-                </li>
-                <li><a href=""></a></li>
-                <li><button></button></li>
-                <li><button></button></li>
-                <li><button></button></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><button></button></li>
-            </ul>
+        <nav class="header__hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-menu__content">
+                <!-- Search bar -->
+                <div class="hamburger-search">
+                    <label for="mobileSearch">
+                        <img src="./assets/icons/search.svg" alt="Search">
+                    </label>
+                    <input type="text" id="mobileSearch" placeholder="Search Rockstar Games...">
+                </div>
+                
+                <!-- Menu items -->
+                <ul class="hamburger-menu__list">
+                    <li><a href="#">OVERVIEW</a></li>
+                    
+                    <li class="hamburger-dropdown">
+                        <button class="hamburger-dropdown-btn">
+                            EXPLORE
+                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        </button>
+                        <div class="hamburger-dropdown-content">
+                            <a href="#">Story</a>
+                            <a href="#">Characters</a>
+                            <a href="#">World</a>
+                            <a href="#">Gameplay</a>
+                        </div>
+                    </li>
+                    
+                    <li class="hamburger-dropdown">
+                        <button class="hamburger-dropdown-btn">
+                            PROGRESS
+                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        </button>
+                        <div class="hamburger-dropdown-content">
+                            <a href="#">Achievements</a>
+                            <a href="#">Challenges</a>
+                            <a href="#">Stats</a>
+                        </div>
+                    </li>
+                    
+                    <li class="hamburger-dropdown">
+                        <button class="hamburger-dropdown-btn">
+                            MEDIA
+                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        </button>
+                        <div class="hamburger-dropdown-content">
+                            <a href="#">Screenshots</a>
+                            <a href="#">Videos</a>
+                            <a href="#">Wallpapers</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#">ONLINE</a></li>
+                    
+                    <li class="hamburger-dropdown">
+                        <button class="hamburger-dropdown-btn">
+                            MORE
+                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        </button>
+                        <div class="hamburger-dropdown-content">
+                            <a href="#">News</a>
+                            <a href="#">Guides</a>
+                            <a href="#">Community</a>
+                            <a href="#">Forums</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#">CATALOGUE</a></li>
+                    <li><a href="#">SUPPORT</a></li>
+                </ul>
+                
+                <!-- User section -->
+                <div class="hamburger-user">
+                    <button class="hamburger-profile">
+                        <img src="./assets/icons/user.svg" alt="Profile">
+                        My Profile
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+    </main>
     <footer></footer>
+    
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -33,32 +33,43 @@ button {
 .header {
     background-color: var(--black);
     display: flex;
+    position: fixed;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding-left: 24px;
     padding-right: 24px;
-    padding-top:24px;
+    padding-top: 24px;
     padding-bottom: 24px;
 }
 
 /* To get logos vertically centered */
-.header__logos-container>.header__logo>a, .header__logos-container>.header__logo {
+.header__logos-container > .header__logo > a,
+.header__logos-container > .header__logo {
     display: flex;
     align-items: center;
 }
 
 /* --------------------------------------------------- */
 /* Hiding elements for mobile view */
-.header__logo--rockstar>a>img, .header__nav-desktop, .header__button--buy, .header__button--search, .header__hamburger-menu, .vertical-div, .desktop__list--catalogue, .desktop__list--support, .desktop__list--media {
+.header__logo--rockstar > a > img,
+.header__nav-desktop,
+.header__button--buy,
+.header__button--search,
+.vertical-div,
+.desktop__list--catalogue,
+.desktop__list--support,
+.desktop__list--media,
+.desktop__list--online {
     display: none;
 }
 /* --------------------------------------------------- */
 
-
-
 /* --------------------------------------------------- */
 /* Setting some styles for buttons */
-.header__hamburger-btn, .header__button, button{
+.header__hamburger-btn,
+.header__button,
+button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -72,18 +83,18 @@ button {
     padding-block: 10px;
 }
 
-.desktop__list-element button, .desktop__list-element a {
+.desktop__list-element button,
+.desktop__list-element a {
     display: flex;
     align-items: center;
 }
 
-.desktop__list--catalogue img, .desktop__list--support img {
+.desktop__list--catalogue img,
+.desktop__list--support img {
     width: 20px;
     height: auto;
 }
 /* --------------------------------------------------- */
-
-
 
 /* --------------------------------------------------- */
 /* Order of elements in the mobile header */
@@ -100,8 +111,6 @@ button {
 }
 /* --------------------------------------------------- */
 
-
-
 /* --------------------------------------------------- */
 /* Setting a width for the logos in mobile view */
 .header__logo--rdr2 img {
@@ -110,31 +119,232 @@ button {
     align-self: center;
 }
 
-.header__logo--rockstar>a>img {
+.header__logo--rockstar > a > img {
     width: 32px;
     height: auto;
 }
 /* --------------------------------------------------- */
 
-
-
 /* --------------------------------------------------- */
 /* Setting size for the button/icons in mobile view */
-.header__button--profile, .header__hamburger-btn {
+.header__button--profile,
+.header__hamburger-btn {
     width: 32px;
     height: 32px;
 }
 
-.header__hamburger-btn img, .header__button--profile img {
+.header__hamburger-btn img,
+.header__button--profile img {
     width: 24px;
 }
 /* --------------------------------------------------- */
 
+/* --------------------------------------------------- */
+/* HAMBURGER MENU STYLES - MOVILE */
+.header__hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    z-index: 1001;
+    overflow-y: auto;
+}
 
+/* IMPORTANTE: !important para forzar la visualización */
+.header__hamburger-menu.active {
+    display: block !important;
+}
+
+.hamburger-menu__content {
+    padding: 80px 24px 40px;
+}
+
+/* Search bar in hamburger menu */
+.hamburger-search {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 32px;
+}
+
+.hamburger-search label {
+    margin-right: 12px;
+}
+
+.hamburger-search label img {
+    width: 20px;
+    height: 20px;
+}
+
+.hamburger-search input {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+.hamburger-search input::placeholder {
+    color: #666;
+}
+
+/* Hamburger menu list */
+.hamburger-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.hamburger-menu__list > li {
+    border-bottom: 1px solid #333;
+}
+
+.hamburger-menu__list > li:last-child {
+    border-bottom: none;
+}
+
+.hamburger-menu__list a,
+.hamburger-dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    color: var(--white);
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-dropdown-content {
+    display: none;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.hamburger-dropdown-content.active {
+    display: block;
+}
+
+.hamburger-dropdown-content a {
+    display: block;
+    padding: 12px 0;
+    color: #999;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.hamburger-dropdown-content a:hover {
+    color: var(--white);
+}
+
+/* Rotate arrow when dropdown is active */
+.hamburger-dropdown.active .hamburger-dropdown-btn img {
+    transform: rotate(180deg);
+}
+
+.hamburger-dropdown-btn img {
+    transition: transform 0.3s ease;
+}
+
+/* User section */
+.hamburger-user {
+    padding-top: 24px;
+    border-top: 1px solid #333;
+}
+
+.hamburger-profile {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hamburger-profile img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+/* --------------------------------------------------- */
 
 /* --------------------------------------------------- */
-@media (min-width: 1024px) {
+/* Dropdown menus for desktop */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--black);
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    border: 1px solid #333;
+    border-top: 2px solid var(--white);
+    z-index: 1000;
+    padding: 16px 0;
+}
 
+.dropdown-menu a {
+    display: block;
+    padding: 12px 24px;
+    color: var(--white);
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+}
+
+.desktop__list-element {
+    position: relative;
+}
+
+.desktop__list-element:hover .dropdown-menu {
+    display: block;
+}
+
+/* Rotate arrow when dropdown is shown */
+.desktop__list-element:hover .dropdown-btn img {
+    transform: rotate(180deg);
+}
+
+.dropdown-btn img {
+    transition: transform 0.3s ease;
+    margin-left: 4px;
+}
+/* --------------------------------------------------- */
+
+.block-1 {
+    height: 1000px;
+    width: 100%;
+    background-color: yellow;
+}
+.block-2 {
+    height: 1000px;
+    width: 100%;
+    background-color: blue;
+}
+.block-3 {
+    height: 1000px;
+    width: 100%;
+    background-color: red;
+}
+
+/* --------------------------------------------------- */
+/* Responsive adjustments - DESKTOP */
+@media (min-width: 1024px) {
     /* xxxxxxxxxxxxxxxxxxx HEADER xxxxxxxxxxxxxxxxxxxxxx */
 
     .header {
@@ -142,12 +352,28 @@ button {
         padding-block: 28px;
     }
 
-    .header__logo--rockstar>a>img, .vertical-div, .header__nav-desktop, .header__button--search, .header__button--buy {
+    .header__logo--rockstar > a > img,
+    .vertical-div,
+    .header__nav-desktop,
+    .header__button--search,
+    .header__button--buy {
         display: flex;
     }
     
-    .header__hamburger-btn, .desktop__list--explore, .desktop__list--progress {
+    .header__hamburger-btn,
+    .desktop__list--explore,
+    .desktop__list--progress {
         display: none;
+    }
+
+    /* IMPORTANTE: Solo ocultar el menú hamburguesa en desktop SIN !important */
+    .header__hamburger-menu {
+        display: none;
+    }
+    
+    /* Asegurar que incluso con .active no se muestre en desktop */
+    .header__hamburger-menu.active {
+        display: none !important;
     }
 
     /* Set the new order for the elements  */
@@ -201,8 +427,20 @@ button {
     }
 }
 
-@media (min-width: 1512px) {
-    .desktop__list--catalogue, .desktop__list--support {
+@media (min-width: 1360px) {
+    .desktop__list--media {
         display: flex;
+    }
+}
+
+@media (min-width: 1512px) {
+    .desktop__list--catalogue,
+    .desktop__list--support,
+    .desktop__list--online {
+        display: flex;
+    }
+
+    .desktop__list--more {
+        display: none;
     }
 }
