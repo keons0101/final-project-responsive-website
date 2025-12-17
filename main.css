@@ -5,6 +5,7 @@
     --black: #000;
     --titles: "Playfair Display", serif;
     --paragraph: "Roboto Slab", serif;
+    --titles-alt: "Special Elite", system-ui;
 }
 
 /* Reset and Base Styles */
@@ -381,6 +382,41 @@ button {
 .section__gallery-pics {
     gap: 4px;
 }
+
+.section__ad {
+    background-color: rgb(46, 1, 1);
+    background-image: url("./assets/images/img-31.png");
+    background-size: cover;
+    background-position: top;
+    padding-top: 52px;
+    padding-bottom: 32px;
+    padding-inline: 20%;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.section__ad h2 {
+    font-family: var(--titles-alt);
+    font-size: 28px;
+}
+
+.classification__container {
+    display: flex;
+    gap: 16px;
+    border: 1px solid #2d2d2d;
+    background-color: var(--black);
+    padding: 20px;
+    font-size: 10px;
+    align-items: center;
+    font-family: sans-serif;
+    border-radius: 4px;
+}
+
+
+
 /* ---------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------- */
 
