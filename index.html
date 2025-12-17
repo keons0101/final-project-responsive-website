@@ -4,75 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of Red Dead Redemption 2. Discover wildlife, hunting, horses, and the epic story from Rockstar Games.">
     <link rel="stylesheet" href="./main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/48ac07c8ea.js" crossorigin="anonymous"></script>
+    <title>Red Dead Redemption 2 | Rockstar Games</title>
 </head>
 
 <body>
-    <header class="header">
+    <!-- HEADER SECTION -->
+    <header class="header" role="banner">
         <div class="header__logos-container">
             <div class="header__logo header__logo--rockstar">
-                <a href=""><img src="./assets/icons/rockstar-logo.svg" alt="Rockstar logo"></a>
+                <a href="#" aria-label="Rockstar Games Home">
+                    <img src="./assets/icons/rockstar-logo.svg" alt="Rockstar Games logo">
+                </a>
             </div>
 
-            <div class="vertical-div"></div>
+            <div class="vertical-div" aria-hidden="true"></div>
 
             <div class="header__logo header__logo--rdr2">
-                <img src="./assets/icons/logo.svg" alt="Logo Red Dead Redemption 2">
+                <img src="./assets/icons/logo.svg" alt="Red Dead Redemption 2 logo">
             </div>
         </div>
 
-        <button class="header__hamburger-btn" id="hamburgerBtn">
-            <img src="./assets/icons/menu.svg" alt="Menu">
+        <button class="header__hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu">
+            <img src="./assets/icons/menu.svg" alt="" aria-hidden="true">
         </button>
 
-        <nav class="header__nav-desktop">
+        <nav class="header__nav-desktop" aria-label="Main navigation">
             <ul class="nav-desktop__list">
                 <li class="desktop__list-element desktop__list--overview">
-                    <a href="">OVERVIEW</a>
+                    <a href="#">OVERVIEW</a>
                 </li>
 
                 <li class="desktop__list-element desktop__list--explore">
-                    <button class="dropdown-btn">
+                    <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">
                         EXPLORE
-                        <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                     </button>
-                    <div class="dropdown-menu">
-                        <a href="#">The Van Der Linde Gang</a>
-                        <a href="#">Locations</a>
-                        <a href="#">Wildlife</a>
-                        <a href="#">Weaponry</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="#" role="menuitem">The Van Der Linde Gang</a>
+                        <a href="#" role="menuitem">Locations</a>
+                        <a href="#" role="menuitem">Wildlife</a>
+                        <a href="#" role="menuitem">Weaponry</a>
                     </div>
                 </li>
 
                 <li class="desktop__list-element desktop__list--progress">
-                    <button class="dropdown-btn">
+                    <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">
                         PROGRESS
-                        <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                     </button>
-                    <div class="dropdown-menu">
-                        <a href="#">Stats</a>
-                        <a href="#">Chapters</a>
-                        <a href="#">Challenges</a>
-                        <a href="#">Character</a>
-                        <a href="#">Compendium</a>
-                        <a href="#">Accomplishments</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="#" role="menuitem">Stats</a>
+                        <a href="#" role="menuitem">Chapters</a>
+                        <a href="#" role="menuitem">Challenges</a>
+                        <a href="#" role="menuitem">Character</a>
+                        <a href="#" role="menuitem">Compendium</a>
+                        <a href="#" role="menuitem">Accomplishments</a>
                     </div>
                 </li>
 
                 <li class="desktop__list-element desktop__list--media">
-                    <button class="dropdown-btn">
+                    <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">
                         MEDIA
-                        <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                     </button>
-                    <div class="dropdown-menu">
-                        <a href="#">Gallery</a>
-                        <a href="#">Artwork</a>
-                        <a href="#">Videos</a>
-                        <a href="#">Music</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="#" role="menuitem">Gallery</a>
+                        <a href="#" role="menuitem">Artwork</a>
+                        <a href="#" role="menuitem">Videos</a>
+                        <a href="#" role="menuitem">Music</a>
                     </div>
                 </li>
 
@@ -81,104 +86,106 @@
                 </li>
 
                 <li class="desktop__list-element desktop__list--more">
-                    <button class="dropdown-btn">
+                    <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">
                         MORE
-                        <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                        <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                     </button>
-                    <div class="dropdown-menu">
-                        <a href="#">Online</a>
-                        <a href="#">Catalogue</a>
-                        <a href="#">Support</a>
-                        <a href="#">Forums</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a href="#" role="menuitem">Online</a>
+                        <a href="#" role="menuitem">Catalogue</a>
+                        <a href="#" role="menuitem">Support</a>
+                        <a href="#" role="menuitem">Forums</a>
                     </div>
                 </li>
 
                 <li class="desktop__list-element desktop__list--catalogue">
                     <a href="#">
                         CATALOGUE
-                        <img src="./assets/icons/top-right-arrow.svg" alt="Top right arrow">
+                        <img src="./assets/icons/top-right-arrow.svg" alt="Opens catalogue in new tab" aria-hidden="true">
                     </a>
                 </li>
                 <li class="desktop__list-element desktop__list--support">
                     <a href="#">
                         SUPPORT
-                        <img src="./assets/icons/top-right-arrow.svg" alt="Top right arrow">
+                        <img src="./assets/icons/top-right-arrow.svg" alt="Opens support in new tab" aria-hidden="true">
                     </a>
                 </li>
             </ul>
         </nav>
 
         <div class="header__button-container">
-            <button class="header__button header__button--buy">Buy Now</button>
-            <button class="header__button header__button--search">
-                <img src="./assets/icons/search.svg" alt="Search">
+            <button class="header__button header__button--buy" aria-label="Buy Red Dead Redemption 2">Buy Now</button>
+            <button class="header__button header__button--search" aria-label="Search">
+                <img src="./assets/icons/search.svg" alt="" aria-hidden="true">
             </button>
-            <button class="header__button header__button--profile">
-                <img src="./assets/icons/user.svg" alt="Profile">
+            <button class="header__button header__button--profile" aria-label="User profile">
+                <img src="./assets/icons/user.svg" alt="" aria-hidden="true">
             </button>
         </div>
 
-        <nav class="header__hamburger-menu" id="hamburgerMenu">
+        <!-- MOBILE HAMBURGER MENU -->
+        <nav class="header__hamburger-menu" id="hamburgerMenu" aria-label="Mobile navigation" aria-hidden="true">
             <div class="hamburger-menu__content">
-                <div class="hamburger-search">
-                    <label for="mobileSearch">
-                        <img src="./assets/icons/search.svg" alt="Search">
-                    </label>
-                    <input type="text" id="mobileSearch" placeholder="Search Rockstar Games...">
+                <div class="hamburger-search" role="search">
+                    <label for="mobileSearch" class="visually-hidden">Search Rockstar Games</label>
+                    <div class="search-input-wrapper">
+                        <img src="./assets/icons/search.svg" alt="" aria-hidden="true">
+                        <input type="text" id="mobileSearch" placeholder="Search Rockstar Games..." aria-label="Search Rockstar Games">
+                    </div>
                 </div>
 
                 <ul class="hamburger-menu__list">
                     <li><a href="#">OVERVIEW</a></li>
 
                     <li class="hamburger-dropdown">
-                        <button class="hamburger-dropdown-btn">
+                        <button class="hamburger-dropdown-btn" aria-haspopup="true" aria-expanded="false">
                             EXPLORE
-                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                            <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                         </button>
-                        <div class="hamburger-dropdown-content">
-                            <a href="#">Story</a>
-                            <a href="#">Characters</a>
-                            <a href="#">World</a>
-                            <a href="#">Gameplay</a>
+                        <div class="hamburger-dropdown-content" role="menu">
+                            <a href="#" role="menuitem">Story</a>
+                            <a href="#" role="menuitem">Characters</a>
+                            <a href="#" role="menuitem">World</a>
+                            <a href="#" role="menuitem">Gameplay</a>
                         </div>
                     </li>
 
                     <li class="hamburger-dropdown">
-                        <button class="hamburger-dropdown-btn">
+                        <button class="hamburger-dropdown-btn" aria-haspopup="true" aria-expanded="false">
                             PROGRESS
-                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                            <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                         </button>
-                        <div class="hamburger-dropdown-content">
-                            <a href="#">Achievements</a>
-                            <a href="#">Challenges</a>
-                            <a href="#">Stats</a>
+                        <div class="hamburger-dropdown-content" role="menu">
+                            <a href="#" role="menuitem">Achievements</a>
+                            <a href="#" role="menuitem">Challenges</a>
+                            <a href="#" role="menuitem">Stats</a>
                         </div>
                     </li>
 
                     <li class="hamburger-dropdown">
-                        <button class="hamburger-dropdown-btn">
+                        <button class="hamburger-dropdown-btn" aria-haspopup="true" aria-expanded="false">
                             MEDIA
-                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                            <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                         </button>
-                        <div class="hamburger-dropdown-content">
-                            <a href="#">Screenshots</a>
-                            <a href="#">Videos</a>
-                            <a href="#">Wallpapers</a>
+                        <div class="hamburger-dropdown-content" role="menu">
+                            <a href="#" role="menuitem">Screenshots</a>
+                            <a href="#" role="menuitem">Videos</a>
+                            <a href="#" role="menuitem">Wallpapers</a>
                         </div>
                     </li>
 
                     <li><a href="#">ONLINE</a></li>
 
                     <li class="hamburger-dropdown">
-                        <button class="hamburger-dropdown-btn">
+                        <button class="hamburger-dropdown-btn" aria-haspopup="true" aria-expanded="false">
                             MORE
-                            <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                            <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                         </button>
-                        <div class="hamburger-dropdown-content">
-                            <a href="#">News</a>
-                            <a href="#">Guides</a>
-                            <a href="#">Community</a>
-                            <a href="#">Forums</a>
+                        <div class="hamburger-dropdown-content" role="menu">
+                            <a href="#" role="menuitem">News</a>
+                            <a href="#" role="menuitem">Guides</a>
+                            <a href="#" role="menuitem">Community</a>
+                            <a href="#" role="menuitem">Forums</a>
                         </div>
                     </li>
 
@@ -187,19 +194,21 @@
                 </ul>
 
                 <div class="hamburger-user">
-                    <button class="hamburger-profile">
-                        <img src="./assets/icons/user.svg" alt="Profile">
+                    <button class="hamburger-profile" aria-label="My Profile">
+                        <img src="./assets/icons/user.svg" alt="" aria-hidden="true">
                         My Profile
                     </button>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
         <!-- WILDLIFE SECTION -->
-        <section class="section">
+        <section class="section" aria-labelledby="wildlife-heading">
             <div class="section__text">
-                <h1>WILDLIFE</h1>
+                <h1 id="wildlife-heading">WILDLIFE</h1>
                 <p>The diverse habitats and climates of Red Dead Redemption 2 are home to around 200 species of animals,
                     birds and fish, all of which behave and respond to their environment in a unique way. Deer, bison
                     and pronghorn traverse the plains in large herds, scavengers quickly sniff out carrion, sockeye
@@ -209,74 +218,28 @@
                     fight for their place on the food chain. The wilderness is at once a bountiful and perilous place,
                     for both man and beast, and any predator can quickly turn prey.</p>
             </div>
-            <img src="./assets/icons/double-down-arrow.svg" alt="Double down arrow">
-            <div class="section__gallery">
-                <img src="./assets/images/img-1.jpg" alt="An illustration of a coyote">
-                <img src="./assets/images/img-2.jpg" alt="An illustration of a deer">
-                <img src="./assets/images/img-3.jpg" alt="An illustration of a vulture">
-                <img src="./assets/images/img-4.jpg" alt="An illustration of a bald eagle">
-                <img src="./assets/images/img-5.jpg" alt="An illustration of an alligator">
-                <img src="./assets/images/img-6.jpg" alt="An illustration of a black horse">
-                <img src="./assets/images/img-7.jpg" alt="An illustration of a grizzly bear">
-                <img src="./assets/images/img-8.jpg" alt="An illustration of some lake sturgeons">
-                <img src="./assets/images/img-9.jpg" alt="An illustration of a reptile">
-                <img src="./assets/images/img-10.jpg" alt="An illustration of a brown horse">
+            <img src="./assets/icons/double-down-arrow.svg" alt="" aria-hidden="true">
+            <div class="section__gallery" role="region" aria-label="Wildlife gallery">
+                <img src="./assets/images/img-1.jpg" alt="Illustration of a coyote in the wild">
+                <img src="./assets/images/img-2.jpg" alt="Illustration of a deer in the forest">
+                <img src="./assets/images/img-3.jpg" alt="Illustration of a vulture perched">
+                <img src="./assets/images/img-4.jpg" alt="Illustration of a bald eagle flying">
+                <img src="./assets/images/img-5.jpg" alt="Illustration of an alligator in water">
+                <img src="./assets/images/img-6.jpg" alt="Illustration of a black horse">
+                <img src="./assets/images/img-7.jpg" alt="Illustration of a grizzly bear standing">
+                <img src="./assets/images/img-8.jpg" alt="Illustration of lake sturgeon fish">
+                <img src="./assets/images/img-9.jpg" alt="Illustration of a reptile">
+                <img src="./assets/images/img-10.jpg" alt="Illustration of a brown horse">
             </div>
         </section>
 
         <!-- HUNTING SECTION -->
-        <section class="section">
+        <section class="section" aria-labelledby="hunting-heading">
             <div class="section__text">
-                <h1>HUNTING & FISHING</h1>
+                <h1 id="hunting-heading">HUNTING & FISHING</h1>
                 <p>Hunting and fishing are essential skills for survival in the wilderness, providing food, materials
                     and a source of income. A huge variety of fish swim the many rivers, lakes and streams, and
-                    selecting the right bait or lure is key to a successful day’s haul. Tracking an animal takes focus
-                    and patience; move carefully and watch the wind direction or you will alert your prey. Choice of
-                    weapon and shot placement are also very important and will affect the quality of the meat and pelt,
-                    which in turn affects the price that traders will pay for them. Make sure to pick the right gauge of
-                    rifle for the size of animal that you’re hunting, or master the use of the bow for a quiet and clean
-                    kill. After a successful hunt, you can either skin and butcher the animal on the spot or take it
-                    with you whole. Just try not to leave it too long or the scavengers will come looking. Skins, parts,
-                    meat and entire carcasses can all be loaded onto your horse to be sold to the butchers in town,
-                    taken back to camp for the stew pot, or crafted into clothing or other items. Nature amply provides
-                    and there is no reason to ever go cold or hungry.</p>
-            </div>
-            <img src="./assets/icons/double-down-arrow.svg" alt="Double down arrow">
-            <div class="section__gallery">
-                <div class="section__item">
-                    <img src="./assets/images/img-11.jpg" alt="A man riding a horse">
-                    <p>Hunting wildlife provides valuable natural resources like meat, hides and other useful materials.
-                        You can sell meat and animal parts to Butchers or General Stores, donate them to your Camp, or
-                        use them to cook and craft. For more exotic goods, bring your haul to a Trapper.</p>
-                </div>
-                <div class="section__item">
-                    <img src="./assets/images/img-12.jpg" alt="A man in the snow">
-                    <p>Game can be found across a range of habitats. If your first shot is not immediately fatal, your
-                        prey will try to escape. Follow clues like blood to track it down and you may need to use a
-                        mercy kill to end the animal's suffering.</p>
-                </div>
-                <div class="section__item">
-                    <img src="./assets/images/img-13.jpg" alt="A man hunting a deer">
-                    <p>Selecting the proper weapon is important to the quality and yield from your kill. Bow and arrow
-                        is often the optimal weapon of choice for clean kills. Approach prey quietly, cover your scent
-                        or stay downwind to make it harder for animals to detect your presence, and use a call to draw
-                        its attention before making your fatal strike.</p>
-                </div>
-                <div class="section__item">
-                    <img src="./assets/images/img-14.jpg" alt="A man fishing">
-                    <p>Like hunting, fishing also yields meat and useful materials. A range of species can be found in
-                        different habitats, each responding to different varieties of bait.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- HORSE SECTION -->
-        <section class="section">
-            <div class="section__text">
-                <h1>HORSES</h1>
-                <p>Hunting and fishing are essential skills for survival in the wilderness, providing food, materials
-                    and a source of income. A huge variety of fish swim the many rivers, lakes and streams, and
-                    selecting the right bait or lure is key to a successful day’s haul. Tracking an animal takes focus
+                    selecting the right bait or lure is key to a successful day's haul. Tracking an animal takes focus
                     and patience; move carefully and watch the wind direction or you will alert your prey. Choice of
                     weapon and shot placement are also very important and will affect the quality of the meat and pelt,
                     which in turn affects the price that traders will pay for them. Make sure to pick the right gauge of
@@ -287,28 +250,74 @@
                     taken back to camp for the stew pot, or crafted into clothing or other items. Nature amply provides
                     and there is no reason to ever go cold or hungry.</p>
             </div>
-            <img src="./assets/icons/double-down-arrow.svg" alt="Double down arrow">
-            <div class="section__gallery">
+            <img src="./assets/icons/double-down-arrow.svg" alt="" aria-hidden="true">
+            <div class="section__gallery" role="region" aria-label="Hunting and fishing gallery">
                 <div class="section__item">
-                    <img src="./assets/images/img-15.jpg" alt="A man riding a horse">
+                    <img src="./assets/images/img-11.jpg" alt="Arthur Morgan riding a horse through the wilderness">
+                    <p>Hunting wildlife provides valuable natural resources like meat, hides and other useful materials.
+                        You can sell meat and animal parts to Butchers or General Stores, donate them to your Camp, or
+                        use them to cook and craft. For more exotic goods, bring your haul to a Trapper.</p>
+                </div>
+                <div class="section__item">
+                    <img src="./assets/images/img-12.jpg" alt="Hunter tracking prey in snowy mountains">
+                    <p>Game can be found across a range of habitats. If your first shot is not immediately fatal, your
+                        prey will try to escape. Follow clues like blood to track it down and you may need to use a
+                        mercy kill to end the animal's suffering.</p>
+                </div>
+                <div class="section__item">
+                    <img src="./assets/images/img-13.jpg" alt="Hunter aiming bow at a deer">
+                    <p>Selecting the proper weapon is important to the quality and yield from your kill. Bow and arrow
+                        is often the optimal weapon of choice for clean kills. Approach prey quietly, cover your scent
+                        or stay downwind to make it harder for animals to detect your presence, and use a call to draw
+                        its attention before making your fatal strike.</p>
+                </div>
+                <div class="section__item">
+                    <img src="./assets/images/img-14.jpg" alt="Character fishing in a river">
+                    <p>Like hunting, fishing also yields meat and useful materials. A range of species can be found in
+                        different habitats, each responding to different varieties of bait.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORSE SECTION -->
+        <section class="section" aria-labelledby="horses-heading">
+            <div class="section__text">
+                <h1 id="horses-heading">HORSES</h1>
+                <p>Hunting and fishing are essential skills for survival in the wilderness, providing food, materials
+                    and a source of income. A huge variety of fish swim the many rivers, lakes and streams, and
+                    selecting the right bait or lure is key to a successful day's haul. Tracking an animal takes focus
+                    and patience; move carefully and watch the wind direction or you will alert your prey. Choice of
+                    weapon and shot placement are also very important and will affect the quality of the meat and pelt,
+                    which in turn affects the price that traders will pay for them. Make sure to pick the right gauge of
+                    rifle for the size of animal that you're hunting, or master the use of the bow for a quiet and clean
+                    kill. After a successful hunt, you can either skin and butcher the animal on the spot or take it
+                    with you whole. Just try not to leave it too long or the scavengers will come looking. Skins, parts,
+                    meat and entire carcasses can all be loaded onto your horse to be sold to the butchers in town,
+                    taken back to camp for the stew pot, or crafted into clothing or other items. Nature amply provides
+                    and there is no reason to ever go cold or hungry.</p>
+            </div>
+            <img src="./assets/icons/double-down-arrow.svg" alt="" aria-hidden="true">
+            <div class="section__gallery" role="region" aria-label="Horses gallery">
+                <div class="section__item">
+                    <img src="./assets/images/img-15.jpg" alt="Wild Hungarian Half-Breed horse in the Heartlands">
                     <p>Wild Hungarian Half-Breeds can be found in the Heartlands among other habitats. Capturing and
                         taming wild horses can be a free method to acquire new mounts.</p>
                 </div>
                 <div class="section__item">
-                    <img src="./assets/images/img-16.jpg" alt="A man in the snow">
+                    <img src="./assets/images/img-16.jpg" alt="Horse stable with equipment and supplies">
                     <p>Buy, sell and store horses from Stables, or purchase provisions to keep your horse fed, tonics
                         that give your horse temporary health and stamina boosts, and equipment like stirrups and
                         saddles, which can improve your horse's performance. Or simply add style to your horse's mane,
                         tail or otherwise.</p>
                 </div>
                 <div class="section__item">
-                    <img src="./assets/images/img-17.jpg" alt="A man hunting a deer">
+                    <img src="./assets/images/img-17.jpg" alt="Character bonding with their horse">
                     <p>Your bond with your horse represents trust and understanding. As your bond with your horse grows
                         over time and through activities like feeding and grooming, your horse's attributes like its
                         health and speed will improve. You will also unlock bonding perks and rewards.</p>
                 </div>
                 <div class="section__item">
-                    <img src="./assets/images/img-18.jpg" alt="A man fishing">
+                    <img src="./assets/images/img-18.jpg" alt="Horse saddle with storage for weapons and items">
                     <p>Store weapons, outfits, masks and hats in your horse's saddle. You can also stow fresh kills;
                         birds and small game can be attached to the saddle or you can store larger game across your
                         horse's rear.</p>
@@ -316,76 +325,92 @@
             </div>
         </section>
 
-        <!-- Gallery section -->
-        <section class="section__gallery section__gallery-pics">
-            <img src="./assets/images/img-19.jpg" alt="">
-            <img src="./assets/images/img-20.jpg" alt="">
-            <img src="./assets/images/img-21.jpg" alt="">
-            <img src="./assets/images/img-22.jpg" alt="">
-            <img src="./assets/images/img-23.jpg" alt="">
-            <img src="./assets/images/img-24.jpg" alt="">
-            <img src="./assets/images/img-25.jpg" alt="">
-            <img src="./assets/images/img-26.jpg" alt="">
-            <img src="./assets/images/img-27.jpg" alt="">
-            <img src="./assets/images/img-28.jpg" alt="">
-            <img src="./assets/images/img-29.jpg" alt="">
-            <img src="./assets/images/img-30.jpg" alt="">
+        <!-- GALLERY SECTION -->
+        <section class="section__gallery section__gallery-pics" aria-label="Red Dead Redemption 2 image gallery">
+            <img src="./assets/images/img-19.jpg" alt="Scenic view of mountains and river">
+            <img src="./assets/images/img-20.jpg" alt="Campfire scene at night">
+            <img src="./assets/images/img-21.jpg" alt="Character riding through forest">
+            <img src="./assets/images/img-22.jpg" alt="Sunset over western landscape">
+            <img src="./assets/images/img-23.jpg" alt="Gunfight in town">
+            <img src="./assets/images/img-24.jpg" alt="Horse riding through water">
+            <img src="./assets/images/img-25.jpg" alt="Camp scene with characters">
+            <img src="./assets/images/img-26.jpg" alt="Snowy mountain pass">
+            <img src="./assets/images/img-27.jpg" alt="Character fishing at lake">
+            <img src="./assets/images/img-28.jpg" alt="Desert landscape">
+            <img src="./assets/images/img-29.jpg" alt="Train robbery scene">
+            <img src="./assets/images/img-30.jpg" alt="Character overlooking valley">
         </section>
 
-        <!-- Ad section -->
-        <section class="section__ad">
+        <!-- ADVERTISEMENT SECTION -->
+        <section class="section__ad" aria-label="Game availability and rating">
             <h2>OUT NOW</h2>
             <div class="classification__container">
-                <img src="./assets/icons/esrb.svg" alt="">
+                <img src="./assets/icons/esrb.svg" alt="ESRB Mature 17+ Rating">
                 <p>Blood and Gore, Intense Violence, Nudity, Sexual Content, Strong Language, Use of Drugs and Alcohol
                 </p>
             </div>
         </section>
     </main>
-    <footer class="footer">
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
         <div class="footer-1">
             <div class="desktop__list-element desktop__list--progress footer__language">
-                <button class="dropdown-btn">
-                    <img src="./assets/icons/language.svg" alt="">
+                <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+                    <img src="./assets/icons/language.svg" alt="" aria-hidden="true">
                     ENGLISH
-                    <img src="./assets/icons/down-arrow.svg" alt="Down arrow">
+                    <img src="./assets/icons/down-arrow.svg" alt="" aria-hidden="true">
                 </button>
-                <div class="dropdown-menu footer__dropdown-menu">
-                    <a href="#">Deutsch</a>
-                    <a href="#">Español</a>
-                    <a href="#">Italiano</a>
-                    <a href="#">Polski</a>
+                <div class="dropdown-menu footer__dropdown-menu" role="menu">
+                    <a href="#" role="menuitem" hreflang="de">Deutsch</a>
+                    <a href="#" role="menuitem" hreflang="es">Español</a>
+                    <a href="#" role="menuitem" hreflang="it">Italiano</a>
+                    <a href="#" role="menuitem" hreflang="pl">Polski</a>
                 </div>
             </div>
-            <nav class="footer__contact">
+            <nav class="footer__contact" aria-label="Contact information">
                 <ul>
-                    <a><li>Contact</li></a>
-                    <a><li>Careers</li></a>
-                    <a><li>Community Resources</li></a>
-                    <a><li>Subscribe</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>Careers</li></a>
+                    <a href="#"><li>Community Resources</li></a>
+                    <a href="#"><li>Subscribe</li></a>
                 </ul>
             </nav>
         </div>
 
-        <!-- Icons -->
-        <div class="footer__social-icons">
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://www.twitch.tv" target="_blank"><i class="fab fa-twitch"></i></a>
+        <!-- SOCIAL MEDIA ICONS -->
+        <div class="footer__social-icons" aria-label="Social media links">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter (opens in new tab)">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in new tab)">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in new tab)">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok (opens in new tab)">
+                <i class="fab fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord (opens in new tab)">
+                <i class="fab fa-discord" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer" aria-label="Twitch (opens in new tab)">
+                <i class="fab fa-twitch" aria-hidden="true"></i>
+            </a>
         </div>
 
-        <nav class="footer__policy">
+        <nav class="footer__policy" aria-label="Legal and policy links">
             <ul>
-                <a><li>Corporate</li></a>
-                <a><li>Privacy</li></a>
-                <a><li>Cookie Settings</li></a>
-                <a><li>Cookie Policy</li></a>
-                <a><li>Legal</li></a>
-                <a><li>Do Not Sell or Share My Personal Information</li></a>
+                <a href="#"><li>Corporate</li></a>
+                <a href="#"><li>Privacy</li></a>
+                <a href="#"><li>Cookie Settings</li></a>
+                <a href="#"><li>Cookie Policy</li></a>
+                <a href="#"><li>Legal</li></a>
+                <a href="#"><li>Do Not Sell or Share My Personal Information</li></a>
             </ul>
         </nav>
 
@@ -403,5 +428,4 @@
 
     <script src="./script.js"></script>
 </body>
-
 </html>
