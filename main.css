@@ -6,6 +6,7 @@
     --titles: "Playfair Display", serif;
     --paragraph: "Roboto Slab", serif;
     --titles-alt: "Special Elite", system-ui;
+    --paragraph-alt: "Roboto", sans-serif;
 }
 
 /* Reset and Base Styles */
@@ -413,17 +414,95 @@ button {
     align-items: center;
     font-family: sans-serif;
     border-radius: 4px;
+    max-width: 300px;
 }
 
+.footer {
+    padding-inline: 36px;
+    padding-block: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--white);
+    font-family: var(--paragraph-alt);
+}
 
+.footer-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.footer__dropdown-menu {
+    margin-top: -80px;
+}
+
+.footer__contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__contact ul>a {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer__social-icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.footer__policy ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__policy ul>a {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer__last-section h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 200;
+}
+
+.footer__last-section div {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
 
 /* ---------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------- */
 
 @media (max-width: 480px) {
     .header__logo--rdr2 img {
-    max-width: 195px;
+        max-width: 195px;
+    }
 }
+
+@media (min-width: 500px) {
+    .footer-1 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .footer__language {
+        grid-column: 2 / 3;
+        justify-self: end;
+    }
+
+    .footer__contact {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
 }
 
 /* Tablet View - 768px and up */
@@ -525,6 +604,11 @@ button {
     .section__gallery-pics {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .footer__language {
+        display: flex;
+    }
+
 }
 
 /* Desktop View - 1075px and up */
