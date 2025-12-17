@@ -10,21 +10,20 @@
     --titles-alt: "Special Elite", system-ui;
     --paragraph-alt: "Roboto", sans-serif;
     
-    /* Fluid typography variables */
-    --min-viewport: 320; /* Mobile first */
-    --max-viewport: 1920; /* Desktop max */
-    --min-font-size: 16; /* Base font size for mobile */
-    --max-font-size: 20; /* Base font size for desktop */
+    /* Base font size for rem calculations */
+    font-size: 16px; /* Esto asegura que 1rem = 16px */
     
-    /* Spacing scale */
-    --space-xs: 0.25rem;  /* 4px */
-    --space-sm: 0.5rem;   /* 8px */
-    --space-md: 1rem;     /* 16px */
-    --space-lg: 1.5rem;   /* 24px */
-    --space-xl: 2rem;     /* 32px */
-    --space-2xl: 2.5rem;  /* 40px */
-    --space-3xl: 3rem;    /* 48px */
-    --space-4xl: 4rem;    /* 64px */
+    /* Spacing scale - más conservadora */
+    --space-xxs: 0.125rem;  /* 2px */
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-md: 0.75rem;    /* 12px */
+    --space-lg: 1rem;       /* 16px */
+    --space-xl: 1.5rem;     /* 24px */
+    --space-2xl: 2rem;      /* 32px */
+    --space-3xl: 2.5rem;    /* 40px */
+    --space-4xl: 3rem;      /* 48px */
+    --space-5xl: 4rem;      /* 64px */
 }
 
 * {
@@ -37,12 +36,12 @@
 
 body {
     background-color: var(--black);
-    font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); /* Responsive base font */
+    font-size: 1rem; /* 16px */
 }
 
 a {
     color: var(--white);
-    font-size: clamp(0.8125rem, 0.75rem + 0.25vw, 0.9375rem); /* 13-15px */
+    font-size: 0.84375rem; /* ~13.5px */
 }
 
 a:visited {
@@ -50,7 +49,7 @@ a:visited {
 }
 
 button {
-    font-size: clamp(0.8125rem, 0.75rem + 0.25vw, 0.9375rem); /* 13-15px */
+    font-size: 0.84375rem; /* ~13.5px */
 }
 
 /* ============================================
@@ -61,8 +60,11 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space-lg) var(--space-md);
-    position: relative;
+    padding: 1.5rem 1.5rem; /* 24px */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1002;
 }
 
@@ -173,7 +175,7 @@ button {
 }
 
 .hamburger-menu__content {
-    padding: 0 var(--space-md) var(--space-2xl);
+    padding: 0 1.5rem 2.5rem; /* 0 24px 40px */
 }
 
 /* Search in Hamburger Menu */
@@ -182,12 +184,12 @@ button {
     align-items: center;
     background-color: #1a1a1a;
     border-radius: 0.25rem; /* 4px */
-    padding: var(--space-sm) 1rem; /* 12px 16px */
-    margin-bottom: var(--space-xl); /* 32px */
+    padding: 0.75rem 1rem; /* 12px 16px */
+    margin-bottom: 2rem; /* 32px */
 }
 
 .hamburger-search label {
-    margin-right: var(--space-sm); /* 12px */
+    margin-right: 0.75rem; /* 12px */
 }
 
 .hamburger-search label img {
@@ -213,7 +215,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 0.5rem; /* 8px */
-    margin-bottom: var(--space-xl); /* 32px */
+    margin-bottom: 2rem; /* 32px */
 }
 
 .hamburger-menu__list > li {
@@ -272,7 +274,7 @@ button {
 
 /* User Section */
 .hamburger-user {
-    padding-top: var(--space-lg); /* 24px */
+    padding-top: 1.5rem; /* 24px */
     border-top: 1px solid #333;
 }
 
@@ -289,7 +291,7 @@ button {
 .hamburger-profile img {
     width: 1.25rem; /* 20px */
     height: 1.25rem; /* 20px */
-    margin-right: var(--space-sm); /* 12px */
+    margin-right: 0.75rem; /* 12px */
 }
 
 /* ============================================
@@ -314,7 +316,7 @@ button {
     border-bottom: 1px solid #222;
     padding-block: 1rem; /* 16px */
     color: var(--white);
-    font-size: clamp(0.8125rem, 0.75rem + 0.25vw, 0.9375rem); /* 13-15px */
+    font-size: 0.84375rem; /* ~13.5px */
     text-decoration: none;
     transition: background-color 0.3s;
 }
@@ -347,9 +349,14 @@ button {
 /* ============================================
    MAIN CONTENT SECTIONS
    ============================================ */
+
+.section__wildlife {
+    margin-top: 100px;
+}
+
 .section {
-    padding-top: var(--space-2xl); /* 40px */
-    padding-bottom: var(--space-2xl); /* 40px */
+    padding-top: 2.5rem; /* 40px */
+    padding-bottom: 2.5rem; /* 40px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -367,15 +374,16 @@ button {
     gap: 1.25rem; /* 20px */
     text-align: center;
     color: var(--white);
-    width: 90%; /* Más flexible que 70% */
-    max-width: 50rem; /* 800px - límite máximo */
+    width: 90%;
+    max-width: 50rem; /* 800px */
     margin: 0 auto;
 }
 
-/* RESPONSIVE TYPOGRAPHY EXAMPLE */
+/* RESPONSIVE TYPOGRAPHY - Más conservadora */
 .section__text h1 {
     font-family: var(--titles);
-    font-size: clamp(1.75rem, 1.5rem + 1.25vw, 2.75rem); /* 28-44px responsive */
+    /* Usando tamaños específicos en media queries en lugar de clamp() */
+    font-size: 2.25rem; /* 36px - base mobile */
     font-weight: 800;
     line-height: 1.2;
 }
@@ -384,14 +392,14 @@ button {
     line-height: 1.6;
     font-family: var(--paragraph);
     font-weight: 400;
-    font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); /* 16-20px responsive */
+    font-size: 1rem; /* 16px - base mobile */
 }
 
 /* Gallery Grids */
 .section__gallery {
     display: grid;
     width: 100%;
-    padding-inline: var(--space-xl); /* 32px */
+    padding-inline: 2rem; /* 32px */
     gap: 1rem; /* 16px */
     grid-template-columns: 1fr;
 }
@@ -412,7 +420,7 @@ button {
     font-weight: 400;
     text-decoration: underline;
     margin-top: 0.75rem; /* 12px */
-    font-size: clamp(1rem, 0.875rem + 0.5vw, 1.25rem); /* 16-20px responsive */
+    font-size: 1rem; /* 16px - base mobile */
 }
 
 /* Special Gallery Section */
@@ -429,8 +437,8 @@ button {
     background-size: cover;
     background-position: top;
     padding-top: 3.25rem; /* 52px */
-    padding-bottom: var(--space-xl); /* 32px */
-    padding-inline: 10%; /* Relativo en lugar de 20% fijo */
+    padding-bottom: 2rem; /* 32px */
+    padding-inline: 5%; /* Más flexible */
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -440,7 +448,7 @@ button {
 
 .section__ad h2 {
     font-family: var(--titles-alt);
-    font-size: clamp(1.5rem, 1.25rem + 1vw, 1.75rem); /* 24-28px responsive */
+    font-size: 1.75rem; /* 28px */
 }
 
 .classification__container {
@@ -460,11 +468,11 @@ button {
    FOOTER SECTION
    ============================================ */
 .footer {
-    padding-inline: var(--space-lg); /* 24px */
-    padding-block: var(--space-xl); /* 32px */
+    padding-inline: 2.25rem; /* 36px */
+    padding-block: 1.75rem; /* 28px */
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xl); /* 40px */
+    gap: 2.5rem; /* 40px */
     color: var(--white);
     font-family: var(--paragraph-alt);
 }
@@ -473,7 +481,7 @@ button {
 .footer-1 {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-xl); /* 32px */
+    gap: 2rem; /* 32px */
 }
 
 .footer__dropdown-menu {
@@ -519,7 +527,7 @@ button {
     align-items: center;
     text-align: center;
     font-weight: 200;
-    font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1rem); /* 14-16px responsive */
+    font-size: 1rem; /* 16px */
 }
 
 .footer__last-section div {
@@ -529,33 +537,8 @@ button {
 }
 
 /* ============================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS - TYPOGRAFÍA
    ============================================ */
-
-/* Extra Small Devices (480px and below) */
-@media (max-width: 30rem) { /* 480px */
-    .header__logo--rdr2 img {
-        max-width: 12.1875rem; /* 195px */
-    }
-}
-
-/* Small Devices (500px and up) */
-@media (min-width: 31.25rem) { /* 500px */
-    .footer-1 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .footer__language {
-        grid-column: 2 / 3;
-        justify-self: end;
-    }
-
-    .footer__contact {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-}
 
 /* Tablet Devices (768px and up) */
 @media (min-width: 48rem) { /* 768px */
@@ -565,7 +548,20 @@ button {
     }
 
     .section {
-        margin-top: 3.875rem; /* 62px */
+        margin-top: 7rem; /* 76px */
+    }
+    
+    /* Tipografía responsiva para tablet */
+    .section__text h1 {
+        font-size: 2.5rem; /* 40px */
+    }
+    
+    .section__text p {
+        font-size: 1.125rem; /* 18px */
+    }
+    
+    .section__item p {
+        font-size: 1.125rem; /* 18px */
     }
 
     .footer {
@@ -637,6 +633,19 @@ button {
     .section__text {
         width: 70%;
     }
+    
+    /* Tipografía responsiva para desktop */
+    .section__text h1 {
+        font-size: 2.75rem; /* 44px */
+    }
+    
+    .section__text p {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .section__item p {
+        font-size: 1.25rem; /* 20px */
+    }
 
     .section__gallery-pics {
         grid-template-columns: repeat(3, 1fr);
@@ -645,6 +654,31 @@ button {
     /* Footer Desktop Styles */
     .footer__language {
         display: flex;
+    }
+}
+
+/* Extra Small Devices (480px and below) */
+@media (max-width: 30rem) { /* 480px */
+    .header__logo--rdr2 img {
+        max-width: 12.1875rem; /* 195px */
+    }
+}
+
+/* Small Devices (500px and up) */
+@media (min-width: 31.25rem) { /* 500px */
+    .footer-1 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .footer__language {
+        grid-column: 2 / 3;
+        justify-self: end;
+    }
+
+    .footer__contact {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
 }
 
