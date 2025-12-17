@@ -318,6 +318,45 @@ button {
     margin-left: 4px;
 }
 
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+.section__wildlife {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.section__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: var(--white);
+    width: 70%;
+}
+
+.wildlife__gallery {
+    display: grid;
+    width: 100%;
+    padding-inline: 32px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+}
+
+.wildlife__gallery img {
+    width: 100%;
+}
+
+/* Tablet View - 768px and up */
+@media (min-width: 768px) {
+    .wildlife__gallery {
+        grid-template-columns: 1fr 1fr;
+        padding-inline: 76px;
+    }
+}
+
 /* Desktop View - 1024px and up */
 @media (min-width: 1024px) {
     .header {
