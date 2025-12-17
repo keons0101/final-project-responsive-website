@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Red Dead Redemption 2">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>404 - Page Not Found | Red Dead Redemption 2</title>
+</head>
+<body class="error-page">
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- HEADER (Mismo que el index) -->
+    <header class="header" role="banner">
+        <div class="header__logos-container">
+            <div class="header__logo header__logo--rockstar">
+                <a href="./index.html" aria-label="Rockstar Games Home">
+                    <img src="./assets/icons/rockstar-logo.svg" alt="Rockstar Games logo">
+                </a>
+            </div>
+            <div class="vertical-div" aria-hidden="true"></div>
+            <div class="header__logo header__logo--rdr2">
+                <a href="./index.html" aria-label="Red Dead Redemption 2 Home">
+                    <img src="./assets/icons/logo.svg" alt="Red Dead Redemption 2 logo">
+                </a>
+            </div>
+        </div>
+
+        <nav class="header__nav-desktop" aria-label="Main navigation">
+            <ul class="nav-desktop__list">
+                <li class="desktop__list-element">
+                    <a href="./index.html">BACK TO HOME</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="header__hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <img src="./assets/icons/menu.svg" alt="" aria-hidden="true">
+        </button>
+
+        <!-- Mobile Menu -->
+        <nav class="header__hamburger-menu" id="hamburgerMenu" aria-label="Mobile navigation">
+            <div class="hamburger-menu__content">
+                <ul class="hamburger-menu__list">
+                    <li><a href="./index.html">BACK TO HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT - 404 Error -->
+    <main id="main-content" class="error-main">
+        <section class="section error-section" aria-labelledby="error-heading">
+            <div class="section__text error-text">
+                <!-- Animación de número 404 -->
+                <div class="error-number" aria-hidden="true">
+                    <span class="error-digit fade-in" style="--delay: 0s">4</span>
+                    <span class="error-digit fade-in" style="--delay: 0.2s">0</span>
+                    <span class="error-digit fade-in" style="--delay: 0.4s">4</span>
+                </div>
+                
+                <h1 id="error-heading" class="slide-up">
+                    Page Not Found
+                </h1>
+                
+                <p class="fade-in-delay">
+                    Looks like you've wandered off the trail, partner. The page you're looking for has either been moved or never existed.
+                </p>
+                
+                <p class="fade-in-delay">
+                    Don't worry, even the best cowboys get lost sometimes. Let's get you back to civilization.
+                </p>
+                
+                <!-- Botón con animación de pulso -->
+                <div class="error-actions">
+                    <a href="./index.html" class="error-btn pulse-animation">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        Return to Home
+                    </a>
+                    
+                    <a href="./index.html#faq-heading" class="error-btn error-btn--secondary">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        Visit FAQ
+                    </a>
+                </div>
+                
+                <!-- Animación de huella de caballo -->
+                <div class="horse-track-animation" aria-hidden="true">
+                    <div class="horse-track"></div>
+                    <div class="horse-track"></div>
+                    <div class="horse-track"></div>
+                </div>
+            </div>
+            
+            <!-- Imagen temática -->
+            <div class="error-image fade-in-image">
+                <img src="./assets/images/img-22.jpg" alt="Sunset over western landscape - Lost trail">
+                <div class="error-image-overlay">
+                    <p>"Lost, but not forgotten"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Mismo que el index) -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-1">
+            <nav class="footer__contact" aria-label="Contact information">
+                <ul>
+                    <a href="./index.html"><li>Return to Home</li></a>
+                    <a href="#"><li>Support</li></a>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="footer__last-section">
+            <h3>Rockstar Games</h3>
+            <p class="error-footer-note">If you believe this is an error, please contact support</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/48ac07c8ea.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

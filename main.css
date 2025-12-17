@@ -475,6 +475,7 @@ button {
     font-family: var(--paragraph);
 }
 
+
 .faq-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -485,6 +486,13 @@ button {
     
     font-family: var(--paragraph);
 }
+
+.faq-section::after {
+    content: url("./assets/images/img-32.png");
+    position: absolute;
+    opacity: 0.1;
+}
+
 
 /* FAQ Accordions */
 .faq-accordions h3 {
@@ -729,6 +737,349 @@ button {
     display: flex;
     gap: 0.75rem; /* 12px */
     justify-content: center;
+}
+
+/* ============================================
+   404 ERROR PAGE STYLES
+   ============================================ */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.error-section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.error-text {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Número 404 con animación */
+.error-number {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: var(--titles-alt);
+}
+
+.error-digit {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #8B0000; /* Rojo western */
+    text-shadow: 3px 3px 0 #000, 6px 6px 0 rgba(0,0,0,0.2);
+    
+    /* Animación keyframe */
+    animation: bounceIn 1s ease-out both;
+    animation-delay: var(--delay, 0s);
+}
+
+/* KEYFRAME ANIMATION: bounceIn */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-100px);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* KEYFRAME ANIMATION: slideUp */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out 0.5s both;
+    font-family: var(--titles);
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* KEYFRAME ANIMATION: fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out both;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1s ease-out 0.8s both;
+    opacity: 0; /* Inicialmente invisible para la animación */
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ccc;
+}
+
+/* KEYFRAME ANIMATION: pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(139, 0, 0, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(139, 0, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(139, 0, 0, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Botones de error */
+.error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.error-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background-color: #8B0000;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-family: var(--paragraph);
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: 2px solid #660000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.error-btn:hover {
+    background-color: #660000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.error-btn--secondary {
+    background-color: transparent;
+    border: 2px solid #444;
+}
+
+.error-btn--secondary:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+.error-btn i {
+    font-size: 1.25rem;
+}
+
+/* KEYFRAME ANIMATION: horseTracks */
+@keyframes horseTracks {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px) rotate(-10deg);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(50px) rotate(10deg);
+    }
+}
+
+.horse-track-animation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    height: 30px;
+}
+
+.horse-track {
+    width: 40px;
+    height: 20px;
+    background: radial-gradient(ellipse at center, #8B0000 0%, transparent 70%);
+    opacity: 0;
+    animation: horseTracks 3s infinite;
+}
+
+.horse-track:nth-child(1) {
+    animation-delay: 0s;
+}
+.horse-track:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.horse-track:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* Imagen con overlay */
+.error-image {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 3px solid #333;
+}
+
+.error-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(30%) brightness(0.7);
+}
+
+.fade-in-image {
+    animation: fadeIn 2s ease-out 1s both;
+    opacity: 0; /* Inicialmente invisible */
+}
+
+.error-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.error-image-overlay p {
+    font-family: var(--titles-alt);
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.error-footer-note {
+    text-align: center;
+    color: #888;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    font-family: var(--paragraph-alt);
+}
+
+/* Responsive para 404 page */
+@media (min-width: 768px) {
+    .error-section {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .error-text {
+        width: 50%;
+    }
+    
+    .error-image {
+        width: 45%;
+    }
+    
+    .slide-up {
+        font-size: 3rem;
+        text-align: left;
+    }
+    
+    .fade-in-delay {
+        text-align: left;
+    }
+    
+    .error-actions {
+        justify-content: flex-start;
+    }
+    
+    .error-digit {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-digit {
+        font-size: 4rem;
+    }
+    
+    .slide-up {
+        font-size: 2rem;
+    }
+    
+    .error-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .error-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* KEYFRAME ANIMATION: shimmer (adicional para efectos) */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Añadir efecto shimmer a los títulos en hover */
+.slide-up:hover {
+    background: linear-gradient(90deg, #FFF, #8B0000, #FFF);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
 }
 
 /* ============================================
