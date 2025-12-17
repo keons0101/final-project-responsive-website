@@ -378,6 +378,9 @@ button {
     margin-top: 12px;
 }
 
+.section__gallery-pics {
+    gap: 4px;
+}
 /* ---------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------- */
 
@@ -481,6 +484,10 @@ button {
 
     .section__item p {
         font-size: 20px;
+    }
+
+    .section__gallery-pics {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
