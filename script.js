@@ -1,56 +1,100 @@
-// Toggle hamburger menu
+/**
+ * Header Navigation Functionality
+ * Handles hamburger menu and dropdown interactions
+ */
+
+// DOM Elements
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const hamburgerMenu = document.getElementById('hamburgerMenu');
 const body = document.body;
 
-console.log('hamburgerBtn:', hamburgerBtn);
-console.log('hamburgerMenu:', hamburgerMenu);
+/**
+ * Calculate header height and adjust menu position
+ */
+function updateMenuPosition() {
+    if (hamburgerMenu) {
+        const header = document.querySelector('.header');
+        if (header) {
+            const headerHeight = header.offsetHeight;
+            hamburgerMenu.style.paddingTop = headerHeight + 'px';
+        }
+    }
+}
 
+/**
+ * Toggle icon between menu and close states
+ */
+function toggleHamburgerIcon(isActive) {
+    const hamburgerIcon = hamburgerBtn.querySelector('img');
+    if (hamburgerIcon) {
+        if (isActive) {
+            // If you have a close icon, use: './assets/icons/close.svg'
+            hamburgerIcon.src = './assets/icons/menu.svg';
+            hamburgerIcon.alt = 'Close menu';
+        } else {
+            hamburgerIcon.src = './assets/icons/menu.svg';
+            hamburgerIcon.alt = 'Menu';
+        }
+    }
+}
+
+/**
+ * Close hamburger menu and reset states
+ */
+function closeHamburgerMenu() {
+    if (hamburgerMenu) {
+        hamburgerMenu.classList.remove('active');
+        body.style.overflow = '';
+        toggleHamburgerIcon(false);
+    }
+}
+
+// Initialize hamburger menu functionality
 if (hamburgerBtn && hamburgerMenu) {
+    // Set initial menu position
+    updateMenuPosition();
+    
+    // Update on window resize
+    window.addEventListener('resize', updateMenuPosition);
+    
+    // Toggle hamburger menu on button click
     hamburgerBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Hamburger button clicked');
         
-        hamburgerMenu.classList.toggle('active');
-        const isActive = hamburgerMenu.classList.contains('active');
+        updateMenuPosition();
+        
+        const isActive = hamburgerMenu.classList.toggle('active');
         body.style.overflow = isActive ? 'hidden' : '';
-        
-        console.log('Menu active:', isActive);
+        toggleHamburgerIcon(isActive);
     });
 
-    // Close hamburger menu when clicking outside
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (hamburgerMenu.classList.contains('active') && 
             !hamburgerMenu.contains(e.target) && 
             !hamburgerBtn.contains(e.target)) {
-            console.log('Click outside - closing menu');
-            hamburgerMenu.classList.remove('active');
-            body.style.overflow = '';
+            closeHamburgerMenu();
         }
     });
 
-    // Close hamburger menu when pressing Escape key
+    // Close menu on Escape key press
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && hamburgerMenu.classList.contains('active')) {
-            console.log('Escape pressed - closing menu');
-            hamburgerMenu.classList.remove('active');
-            body.style.overflow = '';
+            closeHamburgerMenu();
         }
     });
 
-    // Close menu when clicking on links inside the menu
+    // Close menu when clicking on links inside
     const menuLinks = hamburgerMenu.querySelectorAll('a');
     menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            console.log('Link clicked - closing menu');
-            hamburgerMenu.classList.remove('active');
-            body.style.overflow = '';
-        });
+        link.addEventListener('click', closeHamburgerMenu);
     });
 }
 
-// Toggle dropdowns in hamburger menu
+/**
+ * Hamburger menu dropdown functionality
+ */
 const hamburgerDropdownBtns = document.querySelectorAll('.hamburger-dropdown-btn');
 
 hamburgerDropdownBtns.forEach(btn => {
@@ -59,19 +103,25 @@ hamburgerDropdownBtns.forEach(btn => {
         const dropdown = this.parentElement;
         const wasActive = dropdown.classList.contains('active');
         
-        // Close all dropdowns first
+        // Close all other dropdowns
         hamburgerDropdownBtns.forEach(otherBtn => {
-            otherBtn.parentElement.classList.remove('active');
+            if (otherBtn !== this) {
+                otherBtn.parentElement.classList.remove('active');
+            }
         });
         
-        // Toggle this dropdown if it wasn't active
+        // Toggle current dropdown
         if (!wasActive) {
             dropdown.classList.add('active');
+        } else {
+            dropdown.classList.remove('active');
         }
     });
 });
 
-// Optional: Add hover delay for desktop dropdowns
+/**
+ * Desktop dropdown hover functionality with delay
+ */
 const desktopDropdowns = document.querySelectorAll('.desktop__list-element');
 
 desktopDropdowns.forEach(dropdown => {

@@ -1,12 +1,12 @@
+/* CSS Variables */
 :root {
-    /* Colors */
     --white: #FFF;
+    --black-1: #040404;
     --black: #000;
-
-    /* fonts  */
     --roboto: "Monteserrat", sans-serif;
 }
 
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,28 +30,29 @@ button {
     font-size: 13.5px;
 }
 
-.header {
+body {
     background-color: var(--black);
-    display: flex;
-    position: fixed;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
-/* To get logos vertically centered */
+/* Header Container */
+.header {
+    background-color: var(--black-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    position: relative;
+    z-index: 1002;
+}
+
+/* Logo Container */
 .header__logos-container > .header__logo > a,
 .header__logos-container > .header__logo {
     display: flex;
     align-items: center;
 }
 
-/* --------------------------------------------------- */
-/* Hiding elements for mobile view */
+/* Mobile View - Hidden Elements */
 .header__logo--rockstar > a > img,
 .header__nav-desktop,
 .header__button--buy,
@@ -63,10 +64,8 @@ button {
 .desktop__list--online {
     display: none;
 }
-/* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* Setting some styles for buttons */
+/* Button Styles */
 .header__hamburger-btn,
 .header__button,
 button {
@@ -79,8 +78,7 @@ button {
 .header__button--buy {
     border: 1px solid var(--white);
     border-radius: 24px;
-    padding-inline: 16px;
-    padding-block: 10px;
+    padding: 10px 16px;
 }
 
 .desktop__list-element button,
@@ -94,10 +92,8 @@ button {
     width: 20px;
     height: auto;
 }
-/* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* Order of elements in the mobile header */
+/* Mobile Header Layout */
 .header__hamburger-btn {
     order: 1;
 }
@@ -109,10 +105,8 @@ button {
 .header__button-container {
     order: 3;
 }
-/* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* Setting a width for the logos in mobile view */
+/* Logo Sizes */
 .header__logo--rdr2 img {
     height: auto;
     width: 195px;
@@ -123,10 +117,8 @@ button {
     width: 32px;
     height: auto;
 }
-/* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* Setting size for the button/icons in mobile view */
+/* Button and Icon Sizes */
 .header__button--profile,
 .header__hamburger-btn {
     width: 32px;
@@ -137,10 +129,8 @@ button {
 .header__button--profile img {
     width: 24px;
 }
-/* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* HAMBURGER MENU STYLES - MOVILE */
+/* Hamburger Menu Styles */
 .header__hamburger-menu {
     display: none;
     position: fixed;
@@ -149,20 +139,20 @@ button {
     width: 100%;
     height: 100vh;
     background-color: var(--black);
-    z-index: 1001;
+    z-index: -1001;
     overflow-y: auto;
+    padding-top: 88px;
 }
 
-/* IMPORTANTE: !important para forzar la visualización */
 .header__hamburger-menu.active {
     display: block !important;
 }
 
 .hamburger-menu__content {
-    padding: 80px 24px 40px;
+    padding: 0 24px 40px;
 }
 
-/* Search bar in hamburger menu */
+/* Search in Hamburger Menu */
 .hamburger-search {
     display: flex;
     align-items: center;
@@ -194,7 +184,7 @@ button {
     color: #666;
 }
 
-/* Hamburger menu list */
+/* Hamburger Menu List */
 .hamburger-menu__list {
     display: flex;
     flex-direction: column;
@@ -225,6 +215,7 @@ button {
     cursor: pointer;
 }
 
+/* Hamburger Dropdowns */
 .hamburger-dropdown-content {
     display: none;
     padding-left: 16px;
@@ -247,7 +238,6 @@ button {
     color: var(--white);
 }
 
-/* Rotate arrow when dropdown is active */
 .hamburger-dropdown.active .hamburger-dropdown-btn img {
     transform: rotate(180deg);
 }
@@ -256,7 +246,7 @@ button {
     transition: transform 0.3s ease;
 }
 
-/* User section */
+/* User Section in Hamburger Menu */
 .hamburger-user {
     padding-top: 24px;
     border-top: 1px solid #333;
@@ -277,30 +267,34 @@ button {
     height: 20px;
     margin-right: 12px;
 }
-/* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* Dropdown menus for desktop */
+/* Desktop Dropdown Menus */
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: var(--black);
+    background-color: #141414;
     min-width: 200px;
+    margin-top: 35px;
     top: 100%;
     left: 0;
-    border: 1px solid #333;
-    border-top: 2px solid var(--white);
+    border: 1px solid #222;
+    border-radius: 8px;
     z-index: 1000;
-    padding: 16px 0;
 }
 
 .dropdown-menu a {
     display: block;
     padding: 12px 24px;
+    border-bottom: 1px solid #222;
+    padding-block: 16px;
     color: var(--white);
     font-size: 13.5px;
     text-decoration: none;
     transition: background-color 0.3s;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
 }
 
 .dropdown-menu a:hover {
@@ -315,7 +309,6 @@ button {
     display: block;
 }
 
-/* Rotate arrow when dropdown is shown */
 .desktop__list-element:hover .dropdown-btn img {
     transform: rotate(180deg);
 }
@@ -324,32 +317,12 @@ button {
     transition: transform 0.3s ease;
     margin-left: 4px;
 }
-/* --------------------------------------------------- */
 
-.block-1 {
-    height: 1000px;
-    width: 100%;
-    background-color: yellow;
-}
-.block-2 {
-    height: 1000px;
-    width: 100%;
-    background-color: blue;
-}
-.block-3 {
-    height: 1000px;
-    width: 100%;
-    background-color: red;
-}
-
-/* --------------------------------------------------- */
-/* Responsive adjustments - DESKTOP */
+/* Desktop View - 1024px and up */
 @media (min-width: 1024px) {
-    /* xxxxxxxxxxxxxxxxxxx HEADER xxxxxxxxxxxxxxxxxxxxxx */
-
     .header {
-        padding-inline: 64px;
-        padding-block: 28px;
+        padding: 28px 64px;
+        z-index: 1000;
     }
 
     .header__logo--rockstar > a > img,
@@ -366,26 +339,21 @@ button {
         display: none;
     }
 
-    /* IMPORTANTE: Solo ocultar el menú hamburguesa en desktop SIN !important */
     .header__hamburger-menu {
         display: none;
     }
     
-    /* Asegurar que incluso con .active no se muestre en desktop */
     .header__hamburger-menu.active {
         display: none !important;
     }
 
-    /* Set the new order for the elements  */
     .header__logos-container {
         order: 1;
     }
     .header__nav-desktop {
         order: 2;
     }
-    /* --------------------------------------- */
     
-    /* Set containers as flexbox */
     .header__logos-container {
         display: flex;
         gap: 12px;
@@ -403,36 +371,36 @@ button {
         gap: 24px;
         align-items: center;
     }
-    /* --------------------------------------- */
     
-    /* Vertical div between logos */
     .vertical-div {
         background-color: #828282;
         width: 2px;
         height: 24px;
     }
-
-    /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 }
 
+/* Desktop View - 1075px and up */
 @media (min-width: 1075px) {
     .desktop__list--explore {
         display: flex;
     }
 }
 
+/* Desktop View - 1184px and up */
 @media (min-width: 1184px) {
     .desktop__list--progress {
         display: flex;
     }
 }
 
+/* Desktop View - 1360px and up */
 @media (min-width: 1360px) {
     .desktop__list--media {
         display: flex;
     }
 }
 
+/* Desktop View - 1512px and up */
 @media (min-width: 1512px) {
     .desktop__list--catalogue,
     .desktop__list--support,
