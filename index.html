@@ -236,7 +236,7 @@
         <!-- HUNTING SECTION -->
         <section class="section" aria-labelledby="hunting-heading">
             <div class="section__text">
-                <h1 id="hunting-heading">HUNTING & FISHING</h1>
+                <h2 id="hunting-heading">HUNTING & FISHING</h2>
                 <p>Hunting and fishing are essential skills for survival in the wilderness, providing food, materials
                     and a source of income. A huge variety of fish swim the many rivers, lakes and streams, and
                     selecting the right bait or lure is key to a successful day's haul. Tracking an animal takes focus
@@ -282,7 +282,7 @@
         <!-- HORSE SECTION -->
         <section class="section" aria-labelledby="horses-heading">
             <div class="section__text">
-                <h1 id="horses-heading">HORSES</h1>
+                <h2 id="horses-heading">HORSES</h2>
                 <p>Hunting and fishing are essential skills for survival in the wilderness, providing food, materials
                     and a source of income. A huge variety of fish swim the many rivers, lakes and streams, and
                     selecting the right bait or lure is key to a successful day's haul. Tracking an animal takes focus
@@ -348,6 +348,85 @@
                 <img src="./assets/icons/esrb.svg" alt="ESRB Mature 17+ Rating">
                 <p>Blood and Gore, Intense Violence, Nudity, Sexual Content, Strong Language, Use of Drugs and Alcohol
                 </p>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="section faq-section" aria-labelledby="faq-heading">
+            <div class="section__text">
+                <h2 id="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
+                <p>Find answers to common questions about Red Dead Redemption 2. If you have additional questions, feel free to use our contact form.</p>
+            </div>
+            
+            <div class="faq-container">
+                <!-- FAQ Accordions -->
+                <div class="faq-accordions">
+                    <h3>Common Questions</h3>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            What are the system requirements for Red Dead Redemption 2?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Minimum requirements: Windows 10, Intel Core i5-2500K / AMD FX-6300, 8GB RAM, NVIDIA GeForce GTX 770 2GB / AMD Radeon R9 280 3GB, 150GB storage.</p>
+                            <p>Recommended: Windows 10, Intel Core i7-4770K / AMD Ryzen 5 1500X, 12GB RAM, NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, 150GB SSD storage.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            Is Red Dead Online included with the game?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, Red Dead Online is included with your purchase of Red Dead Redemption 2. It's a standalone multiplayer experience set in the world of Red Dead Redemption 2 where you can create your own character and explore the frontier with friends.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            Can I transfer my progress between platforms?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Unfortunately, progress transfer between different platforms (PC, PlayStation, Xbox) is not currently supported. Your game progress and Red Dead Online character are tied to the platform and account you play on.</p>
+                        </div>
+                    </details>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="faq-form">
+                    <h3>Want to ask us something?</h3>
+                    <form class="contact-form" aria-labelledby="form-heading">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthDate">Date of Birth</label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="question">Your Question</label>
+                            <textarea id="question" name="question" rows="4" placeholder="Type your question here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Submit Question</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
