@@ -280,7 +280,29 @@
             <img src="./assets/images/img-20.webp" alt="Campfire at night" loading="lazy">
             <img src="./assets/images/img-21.webp" alt="Riding through forest" loading="lazy">
             <img src="./assets/images/img-22.webp" alt="Sunset over landscape" loading="lazy">
-            <img src="./assets/images/img-23.webp" alt="Gunfight in town" loading="lazy">
+            <picture>
+                <source 
+                    media="(max-width: 480px)"
+                    srcset="./assets/images/img-23-small.webp 480w"
+                    type="image/webp">
+                <source 
+                    media="(max-width: 768px)"
+                    srcset="./assets/images/img-23-medium.webp 768w"
+                    type="image/webp">
+                <source 
+                    media="(max-width: 1024px)"
+                    srcset="./assets/images/img-23-large.webp 1024w"
+                    type="image/webp">
+                <source 
+                    srcset="./assets/images/img-23-xlarge.webp 1920w"
+                    type="image/webp">
+                <img 
+                    src="./assets/images/img-23.webp"
+                    alt="Image of a fox"
+                    loading="lazy"
+                    width="800"
+                    height="450">
+            </picture>
             <img src="./assets/images/img-24.webp" alt="Horse riding through water" loading="lazy">
             <img src="./assets/images/img-25.webp" alt="Camp scene" loading="lazy">
             <img src="./assets/images/img-26.webp" alt="Snowy mountain pass" loading="lazy">

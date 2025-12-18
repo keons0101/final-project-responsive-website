@@ -397,6 +397,18 @@ button {
     height: auto;
 }
 
+/* En tu CSS, agrega: */
+.section__gallery-pics picture {
+    display: block;
+    overflow: hidden; 
+}
+
+.section__gallery-pics picture img {
+    display: block;
+    vertical-align: middle; 
+    line-height: 0;
+}
+
 /* Gallery Items with Text */
 .section__item {
     color: var(--white);
